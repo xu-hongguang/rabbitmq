@@ -19,6 +19,13 @@ public class RabbitTemplateReceiver {
         logger.info("Fanout2 Receive : " + value);
     }
 
+    @RabbitListener(queues = MQConfig.FANOUT_QUEUE_1)
+    public void getInf(byte[] bytes) throws Exception {
+        logger.info("fanout :" + bytes);
+        //字节码转化为对象
+        Information information=(Information) getObjectFromBytes(bytes);
+        System.out.println("获取：" + information);
+    }
 
     /**
      * 接收对象

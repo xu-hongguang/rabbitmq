@@ -22,7 +22,7 @@ public class RabbitConfiguration {
 	@Bean
 	public ConnectionFactory connectionFactory() {
 		CachingConnectionFactory connectionFactory =new CachingConnectionFactory("localhost",5672);
-	    connectionFactory.setUsername("eddy");
+	    connectionFactory.setUsername("xhg");
 	    connectionFactory.setPassword("123456");
 	    return connectionFactory;
 	}

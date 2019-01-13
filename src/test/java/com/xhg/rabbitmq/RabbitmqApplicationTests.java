@@ -1,6 +1,7 @@
 package com.xhg.rabbitmq;
 
 import com.xhg.rabbitmq.amqp.MQSender;
+import com.xhg.rabbitmq.rabbitmq.RabbitTemplateReceiver;
 import com.xhg.rabbitmq.rabbitmq.RabbitTemplateSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,6 +33,13 @@ public class RabbitmqApplicationTests {
 
 //        发送对象
         rabbitTemplateSender.sendObject();
+    }
+
+    @Test
+    public void testRabbitTe() throws Exception {
+
+        rabbitTemplateSender.sendInf();
+
     }
 
 

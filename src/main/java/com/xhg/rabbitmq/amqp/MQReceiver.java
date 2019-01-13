@@ -28,12 +28,12 @@ public class MQReceiver {
         log.info("Topic2 Receive : " + msg);
     }
 
-    @RabbitListener(queues = MQConfig.FANOUT_QUEUE_1)
+//    @RabbitListener(queues = MQConfig.FANOUT_QUEUE_1)
     public void receiveFanout1(String msg) {
         log.info("Fanout1 Receive : " + msg);
     }
 
-    @RabbitListener(queues = MQConfig.FANOUT_QUEUE_2)
+//    @RabbitListener(queues = MQConfig.FANOUT_QUEUE_2)
     public void receiveFanout2(String msg) {
         log.info("Fanout2 Receive : " + msg);
     }

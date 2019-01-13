@@ -29,6 +29,13 @@ public class RabbitTemplateSender {
         rabbitTemplate.convertAndSend(MQConfig.FANOUT_EXCHANGE, "", value);
     }
 
+    public void sendInf() throws Exception {
+        Information information = new Information(3, "we12", "好消息", new GregorianCalendar(2018, 11 - 1, 1).getTime());
+        byte[] bytes = getBytesFromObject(information);
+        rabbitTemplate.convertAndSend(MQConfig.FANOUT_EXCHANGE,"",bytes);
+    }
+
+
     /**
      * 发送对象
      *
