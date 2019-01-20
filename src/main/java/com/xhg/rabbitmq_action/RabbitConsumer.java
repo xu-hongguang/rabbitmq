@@ -12,7 +12,6 @@ import java.util.concurrent.TimeoutException;
  */
 public class RabbitConsumer {
     private static final String QUEUE_NAME = "queue1_demo";
-//    private static final String IP_ADDRESS = "192.168.17.128";
     private static final String IP_ADDRESS = "127.0.0.1";
     private static final int PORT = 5672;
 
